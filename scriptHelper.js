@@ -66,25 +66,24 @@ list.style.visibility= "visible";
 
   if (Number(fuelLevel)< 10000 && Number(cargoMass)>10000) {
 
-fuelStatus.innerHTML= "Not Enough Fuel";
+fuelStatus.innerHTML= `${fuelLevel}L is not enough fuel`;
 launchStatus.innerHTML= "Shuttle not ready for launch";
 launchStatus.style.color= "#C7254E";
-cargoStatus.innerHTML= "Too Much Cargo";
-launchStatus.style.color= "#C7254E";
+cargoStatus.innerHTML= `${cargoMass} is too much cargo mass`;
   }
 
-  if (Number(cargoMass)<10000 && Number(fuelLevel)<10000){
-    fuelStatus.innerHTML= "Not Enough Fuel";
+  else if (Number(cargoMass)<10000 && Number(fuelLevel)<10000){
+    fuelStatus.innerHTML= `${fuelLevel}L is not enough fuel`;
     launchStatus.innerHTML= "Shuttle not ready for launch";
     launchStatus.style.color= "#C7254E";
-    cargoStatus.innerHTML= "Cargo mass good to go!";
+    cargoStatus.innerHTML= `${cargoMass}kg is the right amount of cargo`;
   }
 
-  if (Number(cargoMass)>10000 && Number(fuelLevel)>10000){
-    fuelStatus.innerHTML= "Enough Fuel!";
+  else if (Number(cargoMass)>10000 && Number(fuelLevel)>10000){
+    fuelStatus.innerHTML= `${fuelLevel}L is enough fuel`;
     launchStatus.innerHTML= "Shuttle not ready for launch";
     launchStatus.style.color= "#C7254E";
-    cargoStatus.innerHTML= "Too much Cargo";
+    cargoStatus.innerHTML= `${cargoMass}kg is too much cargo mass`;
   }
 
   else {
